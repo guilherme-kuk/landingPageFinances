@@ -1,0 +1,47 @@
+.name-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  & i {
+    font-size: 1.5rem;
+    color: $secondaryColor;
+    margin-right: 10px;
+
+    @include laptopDesktops {
+      font-size: 1.2rem;
+    }
+
+    @include mobile {
+      font-size: 1.1rem;
+    }
+
+    @include mobileMini {
+      font-size: 1rem;
+    }
+  }
+
+  & h2 {
+    font-size: 4em;
+    font-weight: 400;
+    color: $bg;
+
+    @include laptopDesktops {
+      font-size: 3rem;
+    }
+
+    @include mobile {
+      font-size: 2.4rem;
+    }
+
+    @include mobileMini {
+      font-size: 2.2rem;
+    }
+    
+
+    &::first-letter {
+      color: $secondaryColor;
+      font-weight: 700;
+    }
+  }
+}

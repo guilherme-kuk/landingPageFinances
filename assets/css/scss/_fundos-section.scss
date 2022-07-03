@@ -1,0 +1,162 @@
+.fundos-content {
+  position: relative;
+  background-color: transparent;
+  height: auto;
+  top: -400px;
+
+  @include mobileTablet {
+    position: unset;
+  }
+
+  & .fundos-section {
+    min-height: 440px;
+    height: auto;
+    background-color: $primaryColor;
+    padding: 50px;
+    width: 60%;
+
+    @include mobileTablet {
+      align-items: center;
+      width: 100% !important;
+      padding: 40px !important;
+    }
+    & i {
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include mobileTablet {
+        font-size: 1.5rem;
+      }
+    }
+    & h2 {
+      color: $secondaryColor;
+      font-weight: 700;
+
+      @include tablet {
+        font-size: 2.5rem;
+      }
+
+      @include mobileTablet {
+        font-size: 3rem;
+      }
+    }
+
+    & p {
+      min-height: 280px;
+      height: auto;
+      max-width: 600px;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      color: $letterColor;
+      padding-right: 70px;
+
+      @include tablet {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      @include mobileTablet {
+        align-items: center;
+        width: 100% !important;
+        padding: 0 !important;
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  & .fundos-bg-green {
+    @include flexCenter(); // import from navbar
+    width: 50%;
+    min-height: 350px;
+    height: auto;
+    background-color: $secondaryColor;
+    position: absolute;
+    top: 120px;
+    right: 0;
+
+    @include mobileTablet {
+      position: unset;
+      align-items: center;
+      width: 100% !important;
+      box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    @include mobile {
+      min-height: 0;
+    }
+
+    & .text-green {
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      color: $bg;
+      padding: 50px;
+      margin: 0;
+
+      @include mobile {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  & .fundos-options {
+    margin-top: 65px;
+
+    & .col-6 {
+      min-height: 350px;
+      height: auto;
+
+      @include laptopDesktops {
+        margin-bottom: 40px;
+      }
+
+      @include tablet {
+        margin-bottom: 40px;
+      }
+
+      @include mobileTablet {
+        width: 100%;
+        padding: 0 40px !important;
+        min-height: 0;
+      }
+
+      & h3 {
+        margin-top: 16px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        color: $bg;
+
+        @include tablet {
+          font-size: 1.2rem;
+        }
+      }
+
+      & p {
+        max-width: 550px;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: $bg;
+
+        @include laptopDesktops {
+          max-width: 480px;
+        }
+
+        @include tablet {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          max-width: 320px;
+        }
+
+        @include mobileTablet {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

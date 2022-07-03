@@ -1,0 +1,106 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  top: 20px;
+  z-index: 1;
+  background-color: $navbarbg;
+
+  // logo
+  & .navbar-brand {
+    font-weight: 800;
+    font-size: 1.4rem;
+
+    @include laptopDesktops {
+      font-size: 1.2rem;
+    }
+  }
+
+  & .navbar-brand img {
+    margin-right: 10px;
+  }
+  // btn hb
+  & .navbar-toggler {
+    border: 3px solid $secondaryColor !important;
+  }
+
+  // links navbar
+  & .navbar-nav {
+    @include tablet {
+      background-color: $navbarbg;
+      padding: 20px;
+      padding-bottom: 40px;
+      border-radius: 20px;
+    }
+
+    @include flexCenter();
+
+    & .nav-item {
+      & .nav-link,
+      .btn-login,
+      .btn-green {
+        margin-right: 0.9rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+
+        @include laptopDesktops {
+          width: auto !important;
+          font-size: 0.75rem;
+          margin-right: 0.15rem;
+        }
+
+        @include tablet {
+          margin-top: 10px;
+        }
+      }
+
+      & .btn-login,
+      .btn-green {
+        @include flexCenter();
+        font-weight: 600;
+        color: $primaryColor;
+        transition: 0.5s ease-in;
+      }
+
+      & .btn-login {
+        border: 2px solid $secondaryColor;
+        width: 150px;
+        border-radius: 30px;
+
+        &:hover {
+          border-color: $redHover;
+        }
+
+        @include laptopDesktops {
+          width: 120px;
+          margin-right: 0.4rem;
+        }
+      }
+
+      & .btn-green {
+        width: 180px;
+        background-color: $secondaryColor;
+        border: 2px solid $secondaryColor;
+        border-radius: 30px;
+
+        &:hover {
+          background-color: $redHover;
+          border-color: $redHover;
+        }
+
+        @include laptopDesktops {
+          width: 150px;
+        }
+
+        @include tablet {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.newsletter-content {
+  display: flex;
+  position: relative;
+  min-height: 282px;
+  height: auto;
+  background-color: $primaryColor;
+  top: 73px;
+  z-index: 2;
+
+  @include tablet {
+    padding: 20px !important;
+  }
+
+  @include mobileTablet {
+    position: unset;
+    margin-top: 40px;
+  }
+
+  & .col-12 {
+    @include flexCenter();
+    flex-direction: column;
+  }
+
+  & h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include tablet {
+      font-size: 2.2rem;
+    }
+
+    @include mobileTablet {
+      font-size: 1.5rem;
+    }
+
+    @include mobile {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+form {
+  display: flex;
+  margin-top: 40px;
+
+  @include mobileTablet {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  & #email-input {
+    border-radius: 60px;
+    border: 1px solid #e0e0e0;
+    width: 600px;
+    height: 60px;
+    box-shadow: 0 0 0 0;
+    padding: 20px;
+    padding-right: 70px;
+    font-size: 1.4rem;
+    color: $letterColor;
+
+    @include tablet {
+      font-size: 1.2rem;
+      width: 400px;
+    }
+
+    @include mobileTablet {
+      font-size: 1rem;
+    }
+
+    @include mobile {
+      width: 300px;
+    }
+  }
+
+  & #news-btn {
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border: 1px solid $secondaryColor;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    height: 60px;
+    width: 250px;
+    margin-left: -60px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.5s ease-in;
+
+    @include tablet {
+      width: 200px;
+      font-size: 1rem;
+    }
+
+    @include mobileTablet {
+      margin-left: 0;
+      margin-top: 10px;
+      border-radius: 60px;
+    }
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $letterColor;
+    }
+  }
+}

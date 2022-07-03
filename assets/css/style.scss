@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import './scss/variables';
+@import './scss/header';
+@import './scss/navbar';
+@import './scss/company-section';
+@import './scss/name-section';
+@import './scss/btn-more';
+@import './scss/numbers-section';
+@import './scss/fundos-section';
+@import './scss/newsletter';
+@import './scss/footer';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: $primaryColor;
+}

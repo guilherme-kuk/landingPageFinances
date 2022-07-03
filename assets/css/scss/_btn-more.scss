@@ -1,0 +1,52 @@
+.btn-more {
+  width: 200px;
+  height: 50px;
+  background-color: $secondaryColor;
+  border: 1px solid $secondaryColor;
+  color: $primaryColor;
+  border-radius: 30px;
+  font-weight: 600;
+  
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transition: 0.5s ease-in;
+
+  &:hover {
+    border: 1px solid $secondaryColor;
+    background-color: transparent;
+  }
+
+  @include tablet {
+    width: 50%;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+
+  @include mobileTablet {
+    width: 100%;
+  }
+}
+
+.banner-content {
+  & .col-7 {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.company-text,
+.fundos-content {
+  & .btn-more {
+    &:hover {
+      color: $letterColor;
+
+      @include tablet {
+        color: $primaryColor;
+      }
+    }
+  }
+}

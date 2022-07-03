@@ -1,0 +1,87 @@
+@mixin flex($justify_content) {
+  display: flex;
+  justify-content: $justify_content;
+}
+
+.bg {
+  min-height: 900px;
+  height: auto;
+  background-color: $bg;
+
+  @include mobileTablet {
+    min-height: 0;
+  }
+
+  & .numbers-content {
+    @include flex(center);
+    min-height: 250px;
+    height: auto;
+    position: relative;
+    top: 100px;
+
+    @include laptopDesktops {
+      top: 80px;
+      align-items: center;
+      width: 100% !important;
+    }
+
+    @include tablet {
+      top: 50px;
+    }
+
+    @include mobileTablet {
+      position: unset;
+      padding: 20px 10px;
+      min-height: 0;
+    }
+
+    & .numbers-info {
+      width: 100%;
+
+      & .col {
+        @include tablet {
+          margin-bottom: 20px;
+        }
+      }
+
+      & .numbers {
+        font-weight: 700;
+        font-size: 2.5rem;
+        min-width: 100%;
+        color: $secondaryColor;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+      }
+
+      & .dash {
+        @include flex(center);
+        margin-top: -10px;
+      }
+
+      & .numbers-char {
+        font-size: 1.5rem;
+      }
+
+      & .numbers-title {
+        color: $primaryColor;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        min-width: 170px;
+        max-width: auto;
+      }
+
+      & .numbers-description {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: $primaryColor;
+      }
+    }
+  }
+}
